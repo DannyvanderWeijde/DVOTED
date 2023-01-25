@@ -1,18 +1,24 @@
 <template>
   <header class="header">
-    <nav class="nav" id="nav">
-      <router-link class="nav__item" to="/">Home</router-link>
-    </nav>
+    <navComponent></navComponent>
   </header>
   <main class="main">
     <router-view />
   </main>
 </template>
+
 <script>
-export default {
-  name: "App",
-};
+  import navComponent from './components/Nav'
+
+  export default {
+    name: "App",
+
+    components: {
+      navComponent,
+    }
+  }
 </script>
+
 <style>
   @import './assets/app.css';
 </style>
