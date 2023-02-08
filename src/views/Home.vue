@@ -1,9 +1,7 @@
 <template>
   <div>
-    <header class="header">
-      <nav-component></nav-component>
-    </header>
-
+    <nav-component></nav-component>
+    
     <main class="home">
 
     </main>

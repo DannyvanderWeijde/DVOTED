@@ -1,0 +1,39 @@
+.socials {
+    background: var(--color-quaternary);
+
+    &__container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1700px;
+        width: 100%;
+    }
+
+    &__title {
+        color: var(--color-secondary-accent);
+        font-family: $fm-secondary;
+        font-size: 1.125rem;
+
+        &-container {
+            align-items: center;
+            display: flex;
+            gap: .5rem;
+        }
+    }
+
+    &__icon {
+        font-size: .5rem;
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+    }
+
+    &__img {
+        height: 2.125rem;
+    }
+}

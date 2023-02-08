@@ -1,8 +1,6 @@
 <template>
     <div>
-        <header class="header">
-            <navComponent></navComponent>
-        </header>
+        <navComponent></navComponent>
 
         <div class="about">
             

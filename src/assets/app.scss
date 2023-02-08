@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap");
 @import url("https://fonts.cdnfonts.com/css/regatto");
 @import url("https://fonts.cdnfonts.com/css/signerica-fat");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 
 // Variables.
 @import "./scss/variables/colors";
@@ -12,3 +13,6 @@
 
 // Global.
 @import "./scss/general";
+
+// Components.
+@import "./scss/components/nav"
