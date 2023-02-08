@@ -8,6 +8,8 @@ import {fas} from "@fortawesome/free-solid-svg-icons";
 
 library.add(fas)
 
+require('@/assets/app.css')
+
 createApp(App)
     .use(router)
     .component('font-awesome-icon', FontAwesomeIcon)

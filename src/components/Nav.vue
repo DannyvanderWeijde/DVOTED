@@ -4,7 +4,7 @@
 
         </div>
         <img src="../assets/images/dvoted-logo.webp" alt="dvoted logo">
-        <router-link class="nav__item" v-for="(link, index) in links" :key="index" :to="{link}">{{ index }}</router-link>
+        <router-link class="nav__item" v-for="(link, index) in links" :key="index" :to="link">{{ index }}</router-link>
     </nav>
 </template>
 
@@ -14,7 +14,13 @@ export default {
 
     data() {
         return {
-            links: {'Home': '/'}
+            links: {
+                'About': '/about',
+                'freebies': '/freebies',
+                'getInspired': '/get-inspired',
+                'blog': '/blog',
+                'contact': '/'
+            }
         }
     }
 }
