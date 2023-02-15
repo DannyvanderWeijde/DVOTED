@@ -54,9 +54,11 @@
 .socials__container {
   align-items: center;
   display: flex;
+  height: 54px;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1700px;
+  padding: 0.473rem 0;
   width: 100%;
 }
 .socials__title {
@@ -71,6 +73,7 @@
 }
 .socials__icon {
   font-size: 0.5rem;
+  transition: 1.5s transform ease-in-out;
 }
 .socials__list {
   align-items: center;
@@ -78,6 +81,44 @@
   gap: 1.5rem;
   list-style: none;
 }
-.socials__img {
+.socials__link {
+  display: block;
   height: 2.125rem;
+  position: relative;
+  transition: 1.2s transform ease-in-out;
+}
+.socials__link:before {
+  border-radius: 50%;
+  content: "";
+  height: 2.5rem;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 1.5s background ease-in-out;
+  width: 2.5rem;
+  z-index: 1;
+}
+.socials__link:hover:before {
+  background: rgba(16, 24, 41, 0.1);
+}
+.socials__link:hover {
+  transform: scale(1.1);
+}
+.socials__link--instagram {
+  height: 1.4rem;
+}
+.socials__link--pinterest, .socials__link--spotify {
+  height: 1.5rem;
+}
+.socials__link--youtube {
+  height: 1.8rem;
+}
+.socials__img {
+  height: inherit;
+  position: relative;
+  z-index: 2;
+}
+.socials:hover .socials__icon {
+  transform: translateX(0.25rem);
 }/*# sourceMappingURL=app.css.map */
