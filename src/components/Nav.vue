@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="socials">
+        <section class="socials">
             <div class="socials__container">
                 <div class="socials__title-container">
                     <span class="socials__title">
@@ -22,11 +22,17 @@
                     </ul>
                 </nav>
             </div>
-        </div>
-        <img src="@/assets/images/dvoted-logo.webp" alt="dvoted logo">
-        <nav class="nav">
-            <router-link class="nav__item" v-for="(link, index) in links" :key="index" :to="link">{{ index }}</router-link>
-        </nav>
+        </section>
+        <section class="navbar">
+            <img src="@/assets/images/dvoted-logo.webp" alt="dvoted logo">
+            <nav class="navbar__list">
+                <router-link class="navbar__link" v-for="(link, index) in links" :key="index" :to="link">{{ index }}</router-link>
+                <font-awesome-icon class="navbar__icon" icon="fa-solid fa-magnifying-glass" />
+                <button class="navbar__button button">
+                    E-books
+                </button>
+            </nav>
+        </section>
     </header>
 </template>
 
@@ -38,10 +44,10 @@ export default {
         return {
             links: {
                 'About': '/about',
-                'freebies': '/freebies',
-                'getInspired': '/get-inspired',
-                'blog': '/blog',
-                'contact': '/'
+                'Freebies': '/freebies',
+                'Get inspired': '/get-inspired',
+                'Blog': '/blog',
+                'Contact': '/'
             },
 
             socials: {

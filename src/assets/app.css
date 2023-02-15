@@ -48,6 +48,18 @@
   width: 100%;
 }
 
+.button {
+  background: transparent;
+  border: 2px solid var(--color-secondary);
+  border-radius: 2.5rem;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.75rem 2.5rem;
+  outline: none;
+}
+
 .socials {
   background: var(--color-quaternary);
 }
@@ -121,4 +133,58 @@
 }
 .socials:hover .socials__icon {
   transform: translateX(0.25rem);
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  height: 110px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1700px;
+  width: 100%;
+}
+.navbar__list {
+  align-items: center;
+  display: flex;
+  gap: 2.35rem;
+}
+.navbar__link {
+  color: var(--color-secondary);
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.375rem;
+  font-weight: normal;
+  transition: 0.9s text-shadow ease-in-out;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  text-shadow: 0 0.025rem var(--color-secondary), 0 -0.025rem var(--color-secondary), 0.05rem 0 var(--color-secondary), -0.05rem 0 var(--color-secondary);
+}
+.navbar__icon {
+  cursor: pointer;
+}
+.navbar__button {
+  overflow: hidden;
+  position: relative;
+  transition: 0.9s all ease-in-out;
+}
+.navbar__button:after {
+  background: var(--color-secondary);
+  content: "";
+  height: 0;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 0.9s all ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+.navbar__button:hover {
+  color: var(--color-primary);
+}
+.navbar__button:hover:after {
+  height: 280%;
+  opacity: 1;
 }/*# sourceMappingURL=app.css.map */

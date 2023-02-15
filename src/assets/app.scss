@@ -8,6 +8,7 @@
 @import "./scss/variables/animations";
 @import "./scss/variables/colors";
 @import "./scss/variables/fonts";
+@import "./scss/variables/screen-sizes";
 
 // Animations.
 @import "./scss/animations/animations";
@@ -16,4 +17,5 @@
 @import "./scss/general";
 
 // Components.
-@import "./scss/components/nav"
+@import "./scss/components/button";
+@import "./scss/components/nav";
