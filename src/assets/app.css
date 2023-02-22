@@ -162,6 +162,10 @@
 }
 .navbar__icon {
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  transform: translate(0, -50%);
+  top: 50%;
 }
 .navbar__button {
   overflow: hidden;
@@ -187,4 +191,23 @@
 .navbar__button:hover:after {
   height: 280%;
   opacity: 1;
+}
+.navbar__input {
+  border-radius: 2.5rem;
+  border-width: 0;
+  height: 0;
+  transition: 0.9s width ease-in-out;
+  width: 0;
+}
+.navbar__input--show {
+  border: 2px solid var(--color-secondary);
+  border-width: 100%;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  width: 5rem;
+}
+.navbar__input-container {
+  min-height: 1rem;
+  min-width: 1rem;
+  position: relative;
 }/*# sourceMappingURL=app.css.map */

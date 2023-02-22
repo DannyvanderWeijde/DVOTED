@@ -121,6 +121,10 @@
 
     &__icon {
         cursor: pointer;
+        position: absolute;
+        right: 0;
+        transform: translate(0, -50%);
+        top: 50%;
     }
 
     &__button {
@@ -149,6 +153,28 @@
                 height: 280%;
                 opacity: 1;
             }
+        }
+    }
+
+    &__input {
+        border-radius: 2.5rem;
+        border-width: 0;
+        height: 0;
+        transition: $timing-tertiary width $animation-type-primary;
+        width: 0;
+
+        &--show {
+            border: 2px solid var(--color-secondary);
+            border-width: 100%;
+            height: auto;
+            padding: .25rem .5rem;
+            width: 5rem;
+        }
+
+        &-container {
+            min-height: 1rem;
+            min-width: 1rem;
+            position: relative;
         }
     }
 }

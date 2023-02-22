@@ -23,14 +23,24 @@
                 </nav>
             </div>
         </section>
+
         <section class="navbar">
-            <img src="@/assets/images/dvoted-logo.webp" alt="dvoted logo">
+            <router-link class="navbar__link" :to="'/home'">
+                <img src="@/assets/images/dvoted-logo.webp" alt="dvoted logo">
+            </router-link>
             <nav class="navbar__list">
                 <router-link class="navbar__link" v-for="(link, index) in links" :key="index" :to="link">{{ index }}</router-link>
-                <font-awesome-icon class="navbar__icon" icon="fa-solid fa-magnifying-glass" />
-                <button class="navbar__button button">
-                    E-books
-                </button>
+                
+                <div class="navbar__input-container">
+                    <input :class="['navbar__input', {'navbar__input--show': searchOpen}]" type="text">
+                    <font-awesome-icon class="navbar__icon" icon="fa-solid fa-magnifying-glass" @click="searchInput()" />
+                </div>
+                
+                <router-link class="navbar__link" :to="'/magazine'">
+                    <button class="navbar__button button">
+                        Magazine
+                    </button>
+                </router-link>
             </nav>
         </section>
     </header>
@@ -79,7 +89,14 @@ export default {
                     'img': require('@/assets/images/dvoted-youtube.webp'),
                     'modifier': 'socials__link--youtube'
                 },
-            }
+            },
+            searchOpen: false
+        }
+    },
+
+    methods: {
+        searchInput () {
+            this.searchOpen = !this.searchOpen
         }
     }
 }
