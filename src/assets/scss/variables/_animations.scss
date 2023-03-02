@@ -1,5 +1,30 @@
 $timing-primary: 1.5s;
 $timing-secondary: 1.2s;
-$timing-tertiary: 0.9s;
+$timing-tertiary: .9s;
+$timing-quaternary: 2.5s;
 
 $animation-type-primary: ease-in-out;
+
+// All.
+$transition-all-primary: $timing-tertiary all $animation-type-primary;
+
+// Transform.
+$transition-transform-primary: $timing-primary transform $animation-type-primary;
+$transition-transform-secondary: $timing-secondary transform $animation-type-primary;
+
+// Background.
+$transition-background-primary: $timing-primary background $animation-type-primary;
+
+// Text shadow.
+$transition-text-shadow-primary: $timing-tertiary text-shadow $animation-type-primary;
+
+// Width.
+$transition-width-primary: $timing-tertiary width $animation-type-primary;
+
+// Opacity.
+$transition-opacity-primary: $timing-quaternary opacity $animation-type-primary;
+$transition-opacity-secondary: $timing-tertiary opacity $animation-type-primary;
+
+// padding.
+$transition-padding-primary: 0s padding $animation-type-primary .5s;
+$transition-padding-secondary: .5s padding $animation-type-primary;

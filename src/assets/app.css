@@ -11,6 +11,17 @@
   --color-secondary-accent: #454545;
 }
 
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .fade-enter-active {
   transition: opacity 2s ease-in-out, transform 1s ease-in-out;
 }
@@ -66,7 +77,7 @@
 .socials__container {
   align-items: center;
   display: flex;
-  height: 54px;
+  height: 3.375rem;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1700px;
@@ -86,6 +97,7 @@
 .socials__icon {
   font-size: 0.5rem;
   transition: 1.5s transform ease-in-out;
+  animation: moveArrow 5s infinite;
 }
 .socials__list {
   align-items: center;
@@ -131,23 +143,23 @@
   position: relative;
   z-index: 2;
 }
-.socials:hover .socials__icon {
-  transform: translateX(0.25rem);
-}
 
 .navbar {
   align-items: center;
   display: flex;
-  height: 110px;
+  height: 6.875rem;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1700px;
   width: 100%;
 }
-.navbar__list {
+.navbar__list, .navbar__container {
   align-items: center;
   display: flex;
   gap: 2.35rem;
+}
+.navbar__list {
+  list-style: none;
 }
 .navbar__link {
   color: var(--color-secondary);
@@ -162,10 +174,12 @@
 }
 .navbar__icon {
   cursor: pointer;
+  height: 1.375rem;
   position: absolute;
-  right: 0;
+  right: 0.725rem;
   transform: translate(0, -50%);
   top: 50%;
+  width: 1.375rem;
 }
 .navbar__button {
   overflow: hidden;
@@ -194,20 +208,22 @@
 }
 .navbar__input {
   border-radius: 2.5rem;
-  border-width: 0;
-  height: 0;
-  transition: 0.9s width ease-in-out;
+  font-family: "Work Sans", sans-serif;
+  opacity: 0;
+  padding: 0.5rem;
+  transition: 0.9s width ease-in-out, 0.9s opacity ease-in-out, 0.5s padding ease-in-out;
   width: 0;
 }
 .navbar__input--show {
-  border: 2px solid var(--color-secondary);
-  border-width: 100%;
-  height: auto;
-  padding: 0.25rem 0.5rem;
-  width: 5rem;
+  border: 0.125rem solid var(--color-secondary);
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+  transition: 0.9s width ease-in-out, 2.5s opacity ease-in-out, 0s padding ease-in-out 0.5s;
+  opacity: 1;
+  width: 10rem;
 }
 .navbar__input-container {
   min-height: 1rem;
   min-width: 1rem;
   position: relative;
+  transform: translate(0.725rem, 0);
 }/*# sourceMappingURL=app.css.map */

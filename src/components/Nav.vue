@@ -28,12 +28,16 @@
             <router-link class="navbar__link" :to="'/home'">
                 <img src="@/assets/images/dvoted-logo.webp" alt="dvoted logo">
             </router-link>
-            <nav class="navbar__list">
-                <router-link class="navbar__link" v-for="(link, index) in links" :key="index" :to="link">{{ index }}</router-link>
+            <nav class="navbar__container">
+                <ul class="navbar__list">
+                    <li class="navbar__list-item" v-for="(link, index) in links" :key="index">
+                        <router-link class="navbar__link" :to="link">{{ index }}</router-link>
+                    </li>
+                </ul>
                 
                 <div class="navbar__input-container">
                     <input :class="['navbar__input', {'navbar__input--show': searchOpen}]" type="text">
-                    <font-awesome-icon class="navbar__icon" icon="fa-solid fa-magnifying-glass" @click="searchInput()" />
+                    <img class="navbar__icon" src="@/assets/images/dvoted-search-icon.webp" @click="searchInput()" alt="dvoted search icon">
                 </div>
                 
                 <router-link class="navbar__link" :to="'/magazine'">
