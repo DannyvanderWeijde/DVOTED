@@ -132,7 +132,10 @@
     }
 
     &__button {
+        border: 2px solid var(--color-secondary);
+        font-weight: normal;
         overflow: hidden;
+        padding: .75rem 2.5rem;
         position: relative;
         transition: $transition-all-primary;
 

@@ -1,11 +1,25 @@
 .button {
     background: transparent;
-    border: 2px solid var(--color-secondary);
+    border: none;
     border-radius: 2.5rem;
     cursor: pointer;
     font-family: $fm-secondary;
     font-size: 1.125rem;
-    font-weight: bold;
-    padding: .75rem 2.5rem;
-    outline: none;
+    padding: .625rem 1.625rem;
+    outline-color: transparent;
+
+    &--primary {
+        background: var(--color-secondary);
+    }
+
+    &--secondary {
+        background: var(--color-accent);
+    }
+
+    &--primary,
+    &--secondary {
+        color: var(--color-primary);
+        font-weight: 300;
+        line-height: 1.625rem;
+    }
 }

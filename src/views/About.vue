@@ -2,9 +2,9 @@
     <div>
         <navComponent></navComponent>
 
-        <div class="about">
+        <main class="about">
             
-        </div>
+        </main>
     </div>
 </template>
 
