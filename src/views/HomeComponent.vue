@@ -9,11 +9,11 @@
 </template>
 
 <script>
-  import navComponent from '../components/Nav';
-  import LandingPage from '../components/LandingPage';
+  import navComponent from '../components/NavComponent';
+  import LandingPage from '../components/LandingPageComponent';
 
   export default {
-    name: "Home",
+    name: "HomeComponent",
 
     components: {
       navComponent,

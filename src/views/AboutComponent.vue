@@ -9,10 +9,10 @@
 </template>
 
 <script>
-    import navComponent from '../components/Nav';
+    import navComponent from '../components/NavComponent';
 
     export default {
-        name: 'about',
+        name: 'aboutComponent',
 
         components: {
             navComponent,
